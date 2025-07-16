@@ -15,10 +15,7 @@ const App = () => {
   const hideNavbar = location.pathname === "/login" || location.pathname === "/signup";
   return (
     <>
-      {!hideNavbar && <Navbar />}
-      {/*<Navbar />
-      <div className="relative h-full w-full">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#00FF9D40_100%)]" />*/}     
+      {!hideNavbar && <Navbar />}  
       <div>
         <Routes>
           <Route path="/" element={<Navigate to="/login"/>}/>
@@ -32,35 +29,6 @@ const App = () => {
     </>
   );
 };
-// const App = () => {
-//   return (
-//     <>
-//       <Navbar />
-//       <div className="relative h-full w-full">
-//         <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#00FF9D40_100%)]" />
-        
-//         <Routes>
-//           {/* Public Routes */}
-//           <Route path="/login" element={<LoginPage />} />
-//           <Route path="/signup" element={<SignupPage />} />
 
-//           {/* Protected Routes */}
-//           <Route
-//             path="/HomePage"/////////
-//             element={isLoggedIn() ? <HomePage /> : <Navigate to="/login" />}
-//           />
-//           <Route
-//             path="/create"
-//             element={isLoggedIn() ? <CreatePage /> : <Navigate to="/login" />}
-//           />
-//           <Route
-//             path="/note/:id"
-//             element={isLoggedIn() ? <NoteDetailPage /> : <Navigate to="/login" />}
-//           />
-//         </Routes>
-//       </div>
-//     </>
-//   );
-// };
 
 export default App; 
